@@ -18,8 +18,7 @@ def heapsort(sequence):
             left_child_index = parent_index*2+1                              
             right_child_index = parent_index*2+2                             
 
-            greater_child_index = index_of_greater(left_child_index,         
-                    right_child_index)                                       
+            greater_child_index = index_of_greater(left_child_index, right_child_index)                                       
 
             swap_if_greater(parent_index, greater_child_index)               
 
