@@ -10,8 +10,7 @@ def heapsort(sequence):
 
     def swap_if_greater(parent_index, child_index):                          
         if sequence[parent_index] < sequence[child_index]:                   
-            sequence[parent_index], sequence[child_index] =\                 
-                    sequence[child_index], sequence[parent_index]            
+            sequence[parent_index], sequence[child_index] = sequence[child_index], sequence[parent_index]            
 
     def sift(parent_index, unsorted_length):                                 
         index_of_greater = lambda a, b: a if sequence[a] > sequence[b] else b
