@@ -12,17 +12,17 @@ def heapsort(sequence):
         if sequence[parent_index] < sequence[child_index]:                   
             sequence[parent_index], sequence[child_index] = sequence[child_index], sequence[parent_index]            
 
-    def sift(parent_index, unsorted_length):                                 
-        index_of_greater = lambda a, b: a if sequence[a] > sequence[b] else b
-        while parent_index*2+2 < unsorted_length:                            
-            left_child_index = parent_index*2+1                              
-            right_child_index = parent_index*2+2                             
-
-            greater_child_index = index_of_greater(left_child_index, right_child_index)                                       
-
-            swap_if_greater(parent_index, greater_child_index)               
-
-            parent_index = greater_child_index                               
+    def sift(parent_index, unsorted_length):
+        greaterindex = lambda x, y: x if sequence[x] > sequence[y] else y
+        while parent_index*2+2 < unsorted_length:
+            right_child_index = parent_index*2+2
+            left_child_index = parent_index*2+1
+            
+            greater_child_index = greaterindex(right_child_index, left_child_index)
+            
+            swap_if_greater(parent_index, greater_child_index)
+            
+            parent_index = greater_child_index
 
     def heapify():                                                           
         for i in range((sequence_length/2)-1, -1, -1):                       
