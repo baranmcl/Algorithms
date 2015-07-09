@@ -38,5 +38,5 @@ def heapsort(sequence):
     heapify()                                                                
     sort()
 
-HeapSort(BooYeah)
+heapsort(BooYeah)
 print(BooYeah)
