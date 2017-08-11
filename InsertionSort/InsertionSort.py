@@ -7,7 +7,7 @@ def insertionSort(somelist):
     position = index
     
     while position > 0 and somelist[position-1]>currentvalue:
-      somlist[position] = somelist[position-1]
+      somelist[position] = somelist[position-1]
       position = position-1
       
     somelist[position] = currentvalue
